@@ -35,8 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetId = link.getAttribute('href');
             const targetSection = document.querySelector(targetId);
             
+            // Adjust scroll position to account for fixed header
+            const navHeight = document.querySelector('nav').offsetHeight;
             window.scrollTo({
-                top: targetSection.offsetTop - 80,
+                top: targetSection.offsetTop - navHeight,
                 behavior: 'smooth'
             });
         });
@@ -176,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
-        .profile-placeholder {
+        .profile-image {
             animation: float 6s ease-in-out infinite;
         }
     `;
@@ -210,8 +212,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const targetId = a.getAttribute('href');
                 const targetSection = document.querySelector(targetId);
                 
+                // Adjust scroll position to account for fixed header
+                const navHeight = document.querySelector('nav').offsetHeight;
                 window.scrollTo({
-                    top: targetSection.offsetTop - 80,
+                    top: targetSection.offsetTop - navHeight,
                     behavior: 'smooth'
                 });
                 

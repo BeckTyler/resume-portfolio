@@ -44,6 +44,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     transition: var(--transition);
+    padding-top: 60px; /* Add padding to account for fixed nav */
 }
 
 .container {
@@ -54,16 +55,21 @@ body {
 
 /* Navigation */
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--background-color);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: var(--background-color);
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
+    padding: 15px 20px;
 }
 
 .logo {
